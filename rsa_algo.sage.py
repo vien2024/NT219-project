@@ -6,19 +6,20 @@ from sage.all_cmdline import *   # import sage library
 _sage_const_10 = Integer(10); _sage_const_50 = Integer(50); _sage_const_1 = Integer(1); _sage_const_48 = Integer(48); _sage_const_2 = Integer(2); _sage_const_512 = Integer(512); _sage_const_511 = Integer(511); _sage_const_0 = Integer(0); _sage_const_100 = Integer(100)
 from sage.all import *
 
-# Generate p and q
-p = random_prime(_sage_const_10 **_sage_const_50 -_sage_const_1 ,False,_sage_const_10 **_sage_const_48 )
-q = random_prime(_sage_const_10 **_sage_const_50 -_sage_const_1 ,False,_sage_const_10 **_sage_const_48 )
+# # Generate p and q
+# p = random_prime(_sage_const_10 **_sage_const_50 -_sage_const_1 ,False,_sage_const_10 **_sage_const_48 )
+# q = random_prime(_sage_const_10 **_sage_const_50 -_sage_const_1 ,False,_sage_const_10 **_sage_const_48 )
 
-# Ensure that p is not equal to q
-while(p==q):
-    q = random_prime(_sage_const_2 **_sage_const_512 -_sage_const_1 ,False,_sage_const_2 **_sage_const_511 )
-
+# # Ensure that p is not equal to q
+# while(p==q):
+#     q = random_prime(_sage_const_2 **_sage_const_512 -_sage_const_1 ,False,_sage_const_2 **_sage_const_511 )
+p = 61
+q = 53
 
 # Check primality
 print('----------------------------------------------------------------------------------------------------------------------')
 print(f'The generated Prime number p = {p} is a true prime ? Solution = {is_prime(p)}')
-print(f'The generated Prime number p = {q} is a true prime ? Solution = {is_prime(q)}')
+print(f'The generated Prime number q = {q} is a true prime ? Solution = {is_prime(q)}')
 
 # Calculate n and phi of n
 n = p * q

@@ -1,0 +1,4 @@
+1. Run genkey.py để tạo:
++ key.pub (chứa N,e)
++ input.enc chứa thông điệp được mã hóa (tùy vào lựa chọn thông điệp có sẵn từ file flag.txt hay được nhập từ bàn phím)
+2. Run Pollard_Rho.py để xuất ra thông điệp đã được giải mã 

@@ -25,7 +25,7 @@ def get_pubkey(file):
         return N, e
 
 def test():
-    # Lấy khóa công khai từ tệp pub.key
+    # Lấy khóa công khai từ tệp key.pub
     pubkey_file = 'key.pub'
     N, e = get_pubkey(pubkey_file)
     

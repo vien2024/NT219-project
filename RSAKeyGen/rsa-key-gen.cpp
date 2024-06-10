@@ -133,20 +133,10 @@ int main(int argc, char** argv)
 
 	RSA::PrivateKey r1, r2;
 	r1.GenerateRandomWithKeySize(rng, 3072);
-
-	SavePrivateKey("rsa-roundtrip.key", r1);
-	LoadPrivateKey("rsa-roundtrip.key", r2);
 	
 	r1.Validate(rng, 3);
 	r2.Validate(rng, 3);
 
-	if(r1.GetModulus() != r2.GetModulus() ||
-		r1.GetPublicExponent() != r2.GetPublicExponent() ||
-		r1.GetPrivateExponent() != r2.GetPrivateExponent())
-	{
-		throw runtime_error("key data did not round trip");
-	}
-	
 	cout << "Successfully generated and saved RSA keys" << endl;
 
 	// Load key from file

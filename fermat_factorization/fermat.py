@@ -22,3 +22,13 @@ if __name__ == "__main__":
 
     print("p = {}".format(p))
     print("q = {}".format(q))
+
+    encrypted_text = b''
+    with open("encrypted.txt", "rb") as file:
+        encrypted_text = file.read()
+    phi_n = (p-1) * (q-1)    
+    c_retrieved = int.from_bytes(encrypted_text, 'big')
+    e = 65537
+    d = pow(e, -1, phi_n)
+    message = pow(c_retrieved, d, N)
+    print(f"message: {message}")

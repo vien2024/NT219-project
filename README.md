@@ -2,7 +2,7 @@
 
 Students: 
 - Thiều Minh Viên - 22521661
-- Hồ Diệp Huy - 22520167
+- Hồ Diệp Huy - 22520541
 - Lê Công Danh - 22520199
 
 Lecturer: Nguyễn Ngọc Tự
